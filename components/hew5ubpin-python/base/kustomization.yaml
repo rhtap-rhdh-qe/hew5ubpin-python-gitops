@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: hew5ubpin-python
+  janus-idp.io/tekton: hew5ubpin-python
+  backstage.io/kubernetes-id: hew5ubpin-python
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: hew5ubpin-python
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
